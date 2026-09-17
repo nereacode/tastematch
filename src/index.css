@@ -1,0 +1,50 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
+
+.secondary-button {
+  margin-top: 15px;
+  border: 1px solid #171717;
+  background: transparent;
+  color: #171717;
+  padding: 12px 18px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: #171717;
+  color: #f4f1eb;
+}
+
+.list-section {
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+
+.empty-list {
+  margin-top: 25px;
+  color: #888;
+  font-size: 13px;
+}

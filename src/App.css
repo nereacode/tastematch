@@ -1,0 +1,412 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f4f1eb;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home,
+.quiz-page,
+.results {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 60px 7vw;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.eyebrow {
+  margin: 0 0 28px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  max-width: 900px;
+  font-family: 'Fraunces', serif;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.9;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #172554;
+}
+
+h2 {
+  max-width: 850px;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.95;
+}
+
+.intro {
+  max-width: 480px;
+  margin: 42px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.primary-button {
+  width: fit-content;
+  border: 0;
+  background: #171717;
+  color: #fff;
+  padding: 18px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+.home-footer {
+  position: absolute;
+  bottom: 35px;
+  left: 7vw;
+  right: 7vw;
+  display: flex;
+  gap: 18px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #777;
+  flex-wrap: wrap;
+}
+
+.quiz-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 110px;
+  font-size: 12px;
+}
+
+.progress-line {
+  width: 180px;
+  height: 1px;
+  background: #ccc;
+}
+
+.progress-fill {
+  width: 25%;
+  height: 100%;
+  background: #171717;
+}
+
+.progress-2 {
+  width: 50%;
+}
+
+.question-description {
+  max-width: 580px;
+  margin: 35px 0 50px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.mbti-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 700px;
+}
+
+.mbti-button {
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 20px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mbti-button:hover,
+.mbti-button.selected {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+}
+
+.text-button {
+  margin-top: 35px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.answer-list {
+  display: grid;
+  gap: 12px;
+  max-width: 700px;
+  margin-top: 55px;
+}
+
+.answer-button {
+  text-align: left;
+  padding: 24px;
+  border: 1px solid #ccc;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.answer-button:hover {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+}
+
+.coming-soon {
+  margin-top: 30px;
+  color: #888;
+  font-size: 13px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 60px 0;
+  padding: 30px;
+  width: 250px;
+  border: 1px solid #ccc;
+}
+
+.profile-card span {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #777;
+}
+
+.profile-card strong {
+  font-size: 42px;
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .home,
+  .quiz-page,
+  .results {
+    padding: 40px 6vw;
+  }
+
+  h1 {
+    font-size: clamp(52px, 15vw, 90px);
+  }
+
+  h2 {
+    font-size: clamp(42px, 12vw, 70px);
+  }
+
+  .mbti-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-footer {
+    position: static;
+    margin-top: 70px;
+  }
+
+  .progress {
+    margin-bottom: 70px;
+  }
+}
+
+
+.movie-section {
+  margin-top: 100px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 20px;
+  margin-top: 30px;
+}
+
+.movie-card {
+  min-width: 0;
+}
+
+.movie-card img,
+.movie-placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  background: #ddd;
+}
+
+.movie-info {
+  padding-top: 12px;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.movie-info p {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #888;
+}
+
+.movie-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #777;
+}
+
+.preference-item strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preference-item small {
+  font-size: 11px;
+  color: #888;
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recommendations {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.match-reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.match-reasons span {
+  padding: 5px 7px;
+  border: 1px solid #ccc;
+  font-size: 9px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.movie-actions button {
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 7px 9px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.movie-actions button:hover {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+}
+
+.movie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.movie-actions button {
+  border: 1px solid #ccc;
+  background: transparent;
+  color: inherit;
+  padding: 7px 9px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.movie-actions button:hover {
+  border-color: #171717;
+}
+
+.movie-actions button.active.interested {
+  background: #172554;
+  color: #f4f1eb;
+  border-color: #172554;
+}
+
+.movie-actions button.active.watched {
+  background: #172554;
+  color: #f4f1eb;
+  border-color: #172554;
+}
+
+.movie-actions button.active.not-interested {
+  background: #172554;
+  color: #f4f1eb;
+  border-color: #172554;
+}
+
+.movie-actions button.active {
+  background: #f4f1eb;
+  color: #172554;
+  border-color: #f4f1eb;
+}
